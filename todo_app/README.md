@@ -1,44 +1,99 @@
-# todo_app
+# ✅ Todo App
 
-This template should help get you started developing with Vue 3 in Vite.
+Modern, özellik zengini bir görev yönetim uygulaması. Vue 3 ve Vite ile geliştirilmiştir.
 
-## Recommended IDE Setup
+🌐 **Canlı Demo:** [https://gregarious-gecko-09d7c5.netlify.app](https://gregarious-gecko-09d7c5.netlify.app)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
-## Customize configuration
+## 🚀 Özellikler
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- ✅ Görev ekleme, düzenleme, silme ve tamamlama
+- 🔴 Öncelik seviyesi (Düşük / Orta / Yüksek)
+- 📅 Son tarih & gecikme uyarısı
+- 🏷️ Kategori & etiket sistemi
+- 🔍 Anlık arama çubuğu
+- ⠿ Sürükle & bırak ile sıralama
+- 🌙 Karanlık / ☀️ Aydınlık tema geçişi
+- 💾 LocalStorage ile veri saklama (sayfa yenilense de veriler kaybolmaz)
+- 📊 İstatistik sayfası (tamamlanma oranı, öncelik & kategori dağılımı)
+- 📱 PWA desteği (telefona yüklenebilir)
 
-## Project Setup
+---
 
-```sh
-npm install
+## 🛠️ Kullanılan Teknolojiler
+
+| Teknoloji | Açıklama |
+|-----------|----------|
+| [Vue 3](https://vuejs.org/) | JavaScript framework |
+| [Vite](https://vitejs.dev/) | Build tool |
+| [Pinia](https://pinia.vuejs.org/) | State management |
+| [Vue Router](https://router.vuejs.org/) | Sayfa yönlendirme |
+| [Tailwind CSS](https://tailwindcss.com/) | CSS framework |
+| [vuedraggable](https://github.com/SortableJS/vue.draggable.next) | Drag & drop |
+| [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) | PWA desteği |
+
+---
+
+## 📁 Proje Yapısı
+
+```
+src/
+├── assets/          # CSS dosyaları
+├── components/      # Yeniden kullanılabilir bileşenler
+│   ├── TodoForm.vue     # Görev ekleme & güncelleme formu
+│   └── TodoItem.vue     # Tek görev kartı
+├── interfaces/      # Veri modelleri
+│   └── todo.js          # Todo objesi oluşturucu
+├── router/          # Vue Router yapılandırması
+│   └── index.js
+├── stores/          # Pinia store
+│   └── todoStore.js     # Tüm state & aksiyonlar
+├── views/           # Sayfalar
+│   ├── TodoView.vue     # Ana sayfa
+│   ├── StatsView.vue    # İstatistik sayfası
+│   └── AboutView.vue    # Hakkında sayfası
+└── App.vue          # Kök bileşen & navbar
 ```
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
+## ⚙️ Kurulum
+
+```bash
+# Repoyu klonla
+git clone https://github.com/kullanici-adin/todo_app.git
+
+# Proje dizinine gir
+cd todo_app
+
+# Bağımlılıkları yükle
+npm install
+
+# Geliştirme sunucusunu başlat
 npm run dev
 ```
 
-### Compile and Minify for Production
+Tarayıcıda `http://localhost:5173` adresini aç.
 
-```sh
+---
+
+## 📦 Build & Deploy
+
+```bash
+# Production build al
 npm run build
+
+# Build önizlemesi
+npm run preview
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+> Proje [Netlify](https://netlify.com) üzerinde `dist/` klasörü ile deploy edilmiştir.
 
-```sh
-npm run lint
-```
+---
+
+## 📄 Lisans
+
+Bu proje eğitim amaçlı geliştirilmiştir.
